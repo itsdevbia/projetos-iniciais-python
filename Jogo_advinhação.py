@@ -1,28 +1,37 @@
 import random
 
-print ("Bem vindo ao jogo de Advinhação!")
-print ("Tente advinhar o número que estou pensando entre 1 a 100")
+print('Este é um jogo de adivinhação!')
+print('Tente adivinhar um número de 1 a 100')
 
-numero_secreto = random.randint(1, 100)
-tentativas = 0
+jogar_novamente = 's'
 
-while True:
-    palpite = input("Digite seu palpite: ")
+while jogar_novamente.lower() == 's':
+    numero_secreto = random.randint(1, 100)
+    tentativas = 0
 
-    if not palpite.isdigit():
-        print ("Por favor, digite apenas números!")
-        continue
+    while True:
+        palpite = input("Digite seu palpite: ")
 
-    palpite = int(palpite)
-    tentativas +=1
+        if not palpite.isdigit():
+            print("Por favor, digite apenas números!")
+            continue
 
-    if palpite < numero_secreto:
-        print("É maior!!")
-    elif palpite > numero_secreto:
-        print ("É menor!!")
+        palpite = int(palpite)
+        tentativas += 1
+
+        if palpite < numero_secreto:
+            print("É maior!!")
+        elif palpite > numero_secreto:
+            print("É menor!!")
+        else:
+            print(f"Parabéns! Você descobriu o número {numero_secreto} em {tentativas} tentativas!")
+            break
+
+    jogar_novamente = input("Deseja jogar novamente? (s/n): ")
+
+    if jogar_novamente.lower() == 's':
+        print ("Vamos jogar de novo!!")
     else:
-        print(f"Parabéns! Você acertou o número {numero_secreto} em {tentativas} tentativas!")
-        break
-
-input("Pressione Enter para sair...")
+        print ("Obrigada por jogar!!")
+        input("Aperte Enter para sair do jogo.")
       
