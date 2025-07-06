@@ -5,6 +5,10 @@ Aqui estão meus primeiros códigos criados com muito aprendizado, dedicação e
 
 ---
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![VS Code](https://img.shields.io/badge/Editor-VS%20Code-purple)
+![GitHub](https://img.shields.io/badge/GitHub-Repositório-181717)
+
 ## 📁 Projetos incluídos:
 
 ### 🎮 Jogo_adivinhação.py
