@@ -1,4 +1,4 @@
-print ("Ola! Coloque suas informações abaixo:")
+print ("Olá! Por favor, insira suas informações abaixo: ")
 
 from datetime import datetime 
 
@@ -20,7 +20,7 @@ while cadastro_novo.lower() == 's':
             CPF_formato = f"{CPF[:3]}.{CPF[3:6]}.{CPF[6:9]}-{CPF[9:]}"
             break
         else:
-            print (" CPF invalido! Digite apenas os 11 números.")
+            print (" CPF inválido! Digite apenas os 11 números.")
 
     while True:
         data_nascimento = input("Data de nascimento: ")
@@ -28,17 +28,16 @@ while cadastro_novo.lower() == 's':
             data_convertida = datetime.strptime(data_nascimento, "%d/%m/%Y")
             break
         except ValueError:
-            print("formato inválido! use o formato dd/mm/aaaa e insira uma data real.")
+            print("formato inválido! Use o formato dd/mm/aaaa e insira uma data real.")
     
-    print (f"Olá, {nome}! Você nasceu em {data_nascimento} e possui o CPF {CPF_formato}.")
-    print ("Obrigada por compartilhar suas informções!")
+    print (f"Olá, {nome}! Nascido(a) em {data_nascimento} e possui o CPF {CPF_formato}.")
+    print ("Obrigada por compartilhar suas informações!")
 
     usuarios.append({
         "nome": nome,
         "CPF": CPF_formato,
         "data_nascimento": data_nascimento
     })
-
 
     cadastro_novo = input("Deseja cadastrar outro usuário? (s/n): ")
 
